@@ -2,7 +2,7 @@ FROM amazonlinux:2017.03
 
 # Need to set "ulimit -n" to a small value to stop yum from hanging:
 # https://bugzilla.redhat.com/show_bug.cgi?id=1715254#c1
-RUN ulimit -n 1024 && yum -y update && yum -y install \
+RUN yum -y install \
     git \
     gcc \
     python36 \
